@@ -8,11 +8,13 @@ import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 
+const APP_NAME = 'rro-ssr'; // TODO: replace me!
+
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
-  const distFolder = join(process.cwd(), 'dist/rro-ssr/browser');
-  const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+  const DIST_FOLDER = join(process.cwd(), 'dist', APP_NAME, 'browser');
+  const indexHtml = existsSync(join(DIST_FOLDER, 'index.original.html')) ? 'index.original.html' : 'index';
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine('html', ngExpressEngine({
@@ -20,12 +22,12 @@ export function app(): express.Express {
   }));
 
   server.set('view engine', 'html');
-  server.set('views', distFolder);
+  server.set('views', DIST_FOLDER);
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
-  server.get('*.*', express.static(distFolder, {
+  server.get('*.*', express.static(DIST_FOLDER, {
     maxAge: '1y'
   }));
 

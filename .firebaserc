@@ -1,7 +1,16 @@
 {
+  "projects": {
+    "default": "ssr-debug-78dbc"
+  },
   "targets": {
     "ssr-debug-78dbc": {
       "hosting": {
+        "development": [
+          "dev-ef024"
+        ],
+        "production": [
+          "ssr-debug-78dbc"
+        ],
         "rro-ssr": [
           "ssr-debug-78dbc"
         ]

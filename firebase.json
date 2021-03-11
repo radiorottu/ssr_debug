@@ -4,7 +4,9 @@
       "target": "rro-ssr",
       "public": "dist\\rro-ssr\\dist\\rro-ssr\\browser",
       "ignore": [
-        "**/.*"
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
       ],
       "headers": [
         {
@@ -27,5 +29,12 @@
   ],
   "functions": {
     "source": "dist/rro-ssr"
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
   }
 }
