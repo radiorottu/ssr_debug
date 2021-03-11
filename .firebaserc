@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ssr-debug-78dbc": {
+      "hosting": {
+        "rro-ssr": [
+          "ssr-debug-78dbc"
+        ]
+      }
+    }
+  }
+}
