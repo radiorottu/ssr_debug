@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "deploy": "npm run build:ssr && npm run --prefix functions build:ssr && firebase deploy",
+    "deploy:ultimate": "ng deploy && npm run --prefix functions copy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "rro-ssr",
-      "public": "dist\\rro-ssr\\dist\\rro-ssr\\browser",
+      "public": "lalala",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -28,7 +28,7 @@
     }
   ],
   "functions": {
-    "source": "dist/rro-ssr"
+    "source": "lala"
   },
   "firestore": {
     "rules": "firestore.rules",
