@@ -1,1 +1,0 @@
-exports.ssr = require('../ssr').ssr;

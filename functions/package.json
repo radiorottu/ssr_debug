@@ -3,13 +3,14 @@
   "description": "Angular Universal Application",
   "scripts": {
     "lint": "",
+    "build": "tsc",
     "serve": "firebase serve --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"
   },
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "engines": {
     "node": "10"
   },
