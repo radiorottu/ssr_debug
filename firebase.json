@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "rro-ssr",
-      "public": "lalala",
+      "public": "_empty",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -28,7 +28,7 @@
     }
   ],
   "functions": {
-    "source": "lala"
+    "source": "functions"
   },
   "firestore": {
     "rules": "firestore.rules",
