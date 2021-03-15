@@ -1,9 +1,10 @@
 "use strict";
-const functions = require('firebase-functions');
+Object.defineProperty(exports, "__esModule", { value: true });
+const utils_1 = require("./utils");
 // Increase readability in Cloud Logging
 require("firebase-functions/lib/logger/compat");
 const expressApp = require('../dist/rro-ssr/server/main').app();
-exports.ssr = functions
+exports.ssr = utils_1.functions
     .region('us-central1')
     .runWith({})
     .https
