@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "rro-ssr",
-      "public": "_empty",
+      "public": "dist/rro-ssr/dist/rro-ssr/browser",
       "ignore": [
         "firebase.json",
         "**/.*",
