@@ -11,7 +11,12 @@
     "dev:ssr": "ng run rro-ssr:serve-ssr",
     "serve:ssr": "node dist/rro-ssr/server/main.js",
     "build:ssr": "ng build --prod && ng run rro-ssr:server:production",
-    "prerender": "ng run rro-ssr:prerender"
+    "prerender": "ng run rro-ssr:prerender",
+    "rename": "npm --prefix functions run rename",
+    "build:functions": "npm --prefix functions run build",
+    "deploy:functions": "npm --prefix functions run deploy:firebase",
+    "serve:firebase": "npm run build:ssr && npm run rename && npm run build:functions && firebase serve",
+    "deploy:firebase": "npm run build:ssr && npm run rename && npm run build:functions && npm run deploy:functions"
   },
   "private": true,
   "dependencies": {

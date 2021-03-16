@@ -1,21 +1,15 @@
 {
   "functions": {
-    "source": "dist/rro-ssr"
+    "source": "functions"
   },
   "hosting": [
     {
-      "public": "dist/rro-ssr",
+      "target": "rro-ssr",
+      "public": "functions\\dist\\rro-ssr\\browser",
       "ignore": [
         "firebase.json",
         "**/.*",
         "**/node_modules/**"
-      ]
-    },
-    {
-      "target": "rro-ssr",
-      "public": "dist\\rro-ssr\\dist\\rro-ssr\\browser",
-      "ignore": [
-        "**/.*"
       ],
       "headers": [
         {

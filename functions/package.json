@@ -3,10 +3,12 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
     "build": "tsc",
+    "rename": "node rename-index",
     "serve": "npm run build && firebase emulators:start --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
+    "deploy:firebase": "firebase deploy",
     "logs": "firebase functions:log"
   },
   "engines": {

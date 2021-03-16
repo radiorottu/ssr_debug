@@ -7,3 +7,14 @@ import * as functions from "firebase-functions";
 //   functions.logger.info("Hello logs!", {structuredData: true});
 //   response.send("Hello from Firebase!");
 // });
+
+const APP_NAME = 'rro-ssr'; // TODO: change this!
+// const universal = require(`${process.cwd()}/dist/${APP_NAME}/server/main`).app();
+const universal = require(`../dist/${APP_NAME}/server/main`).app();
+
+const DIST_FOLDER = require(`../dist/${APP_NAME}/server/main`).distFolder;
+
+functions.logger.log("DIST_FOLDER:", DIST_FOLDER);
+functions.logger.log("functions universal variable:", universal);
+
+export const ssr = functions.https.onRequest(universal);
