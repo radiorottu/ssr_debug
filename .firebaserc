@@ -1,4 +1,7 @@
 {
+  "projects": {
+    "default": "ssr-debug-78dbc"
+  },
   "targets": {
     "ssr-debug-78dbc": {
       "hosting": {

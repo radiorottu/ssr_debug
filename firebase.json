@@ -1,5 +1,16 @@
 {
+  "functions": {
+    "source": "dist/rro-ssr"
+  },
   "hosting": [
+    {
+      "public": "dist/rro-ssr",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
     {
       "target": "rro-ssr",
       "public": "dist\\rro-ssr\\dist\\rro-ssr\\browser",
@@ -24,8 +35,5 @@
         }
       ]
     }
-  ],
-  "functions": {
-    "source": "dist/rro-ssr"
-  }
+  ]
 }
